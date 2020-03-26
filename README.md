@@ -34,4 +34,4 @@ Additionally, a user’s attendance percentage is only impacted by mandatory eve
 
 ## Relational Schema:
 
-![A Relational Schema should appear here](/IS437_FinalProject_Folder/IS437_FP_OverviewAndSchema.png)
+![A Relational Schema should appear here](/IS437_FinalProject_Folder/IS437_FP_Schema.png)
