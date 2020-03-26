@@ -14,17 +14,7 @@ Additionally, a user’s attendance percentage is only impacted by mandatory eve
 
 
 ## Use Cases
-* General Use Cases:
-*	Administrator/ User logs in
-*	Administrator/ User logs out
-*	Administrator/ User views event
-*	Administrator/ User views own profile
-*	Administrator/ User views equipment table
-*	Administrator/ User views issued equipment table
-*	Administrator views user profile
-*	User updates issued equipment status (lost, retired or returned)
 
-* Higher Level Use Cases:
 *	Administrator creates user profile
 *	Administrator updates user profile
 *	Administrator updates user type
@@ -41,6 +31,7 @@ Additionally, a user’s attendance percentage is only impacted by mandatory eve
 *	Administrator creates date replaced/returned
 *	Administrator updates date replaced/returned
 *	Administrator deletes date replaced/returned
+*	User updates issued equipment status (lost, retired or returned)
 
 ## Relational Schema:
 
