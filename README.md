@@ -1,6 +1,6 @@
 # IS 437 Final Project Documentation
  
-## Project Narrative
+## Project Narrative:
 * For technical purposes, upperclassmen (seniors) will be administrators for the UI and underclassmen will be users. 
 This application will allow administrators to create events, issue equipment to users and verify attendance. 
 Users’ attendance would be recorded in person and only updated by administrators later if necessary. 
@@ -13,8 +13,7 @@ Furthermore, they exist because not every item in inventory is not issued to eve
 Additionally, a user’s attendance percentage is only impacted by mandatory events. 
 
 
-## Use Cases
-
+## Use Cases:
 *	Administrator creates user profile
 *	Administrator updates user profile
 *	Administrator updates user type
