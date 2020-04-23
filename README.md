@@ -12,26 +12,6 @@ These are the attendance and issued equipment tables.
 Furthermore, they exist because not every item in inventory is not issued to every user and not all events are mandatory. 
 Additionally, a user’s attendance percentage is only impacted by mandatory events. 
 
-
-## Use Cases:
-*	Administrator creates user profile
-*	Administrator updates user profile
-*	Administrator updates user type
-*	Administrator deletes user profile
-*	Administrator creates event
-*	Administrator updates event
-*	Administrator deletes event
-*	Administrator creates new item in equipment table
-*	Administrator deletes item in equipment table
-*	User reports attendance
-*	Administrator verifies attendance record
-*	System calculates attendance percentage
-*	Administrator verifies issued equipment status
-*	Administrator creates date replaced/returned
-*	Administrator updates date replaced/returned
-*	Administrator deletes date replaced/returned
-*	User updates issued equipment status (lost, retired or returned)
-
 ## Relational Schema:
 
 ![A Relational Schema should appear here](/OverviewAndSchema/IS437_FP_Schema.png)
