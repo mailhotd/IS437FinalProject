@@ -1,0 +1,1 @@
+DB = {'host':'mysql.clarksonmsda.org', 'port':3306, 'user':'mailhotd', 'passwd':'clarkson2020', 'db':'mailhotd_ROTCDB', 'autocommit':True}
