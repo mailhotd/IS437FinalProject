@@ -10,7 +10,7 @@ The other two primary tables will be an equipment table that contains all possib
 Due to the many-many relationships between the user table and the two other main tables, there need to be bridge entity tables to record the individual instances (which user has which items or which user has attended which event). 
 These are the attendance and issued equipment tables. 
 Furthermore, they exist because not every item in inventory is not issued to every user and not all events are mandatory. 
-Additionally, a user’s attendance percentage is only impacted by mandatory events. 
+User information will be maintained on their behalf by administrators.
 
 ### User Table 
 
