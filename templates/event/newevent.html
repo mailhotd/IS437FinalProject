@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>New event</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
+		
+		<form action="/newevent" method="POST">
+			Name:<br>
+			<input type="text" name="EventName"  /><br><br>
+			
+			Status:<br>
+			<select name="EventStatus">
+				<option value="Mandatory" >Mandatory</option>
+				<option value="Optional" >Optional</option>
+			</select> 
+			
+			<br><br>
+		
+			Semester:<br>
+			<select name="EventSemester">
+				<option value="Fall" >Fall</option>
+				<option value="Spring" >Spring</option>
+			</select>
+			
+			<br><br>
+			
+			Start:<br>
+			<input type="datetime-local" name="EventStartDT"  /><br><br>
+			
+			End:<br>
+			<input type="datetime-local" name="EventEndDT"   /><br><br>
+			
+			<br>
+			
+			<input type="submit" value="Save Event"/>
+			
+		</form>
+{% endblock %}

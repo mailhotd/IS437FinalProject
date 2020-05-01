@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Event</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+	  {% endif %}
+	  
+	<form action="/saveevent" method="POST">
+		Name:<br>
+		<input type="text" name="EventName" value="{{ event.EventName }}" /><br><br>
+		
+		Status:<br>
+		<input type="text" name="EventStatus" value="{{ event.EventStatus }}" /><br><br>
+		
+		Semester:<br>
+		<input type="text" name="EventSemester" value="{{ event.EventSemester }}" /><br><br>
+		
+		Start:<br>
+		<input type="text" name="EventStartDT" value="{{ event.EventStartDT }}" /><br><br>
+		
+		End:<br>
+		<input type="text" name="EventEndDT" value="{{ event.EventEndDT }}" /><br><br>
+		
+		<input type="hidden" name="EventID" value="{{ event.EventID }}" />
+		
+
+		<br>
+		
+		<input type="submit" value="Save Event"/>
+			
+		</form>
+		
+		<form action="/deleteevent" method="POST">
+		
+			<input type="submit" value="Delete Event" />
+			
+			<input type="hidden" name="EventID" value="{{ event.EventID }}" />
+			
+		</form>
+{% endblock %}

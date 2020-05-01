@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Equipment Table</h1>
+		<a href="newequipment">Add New Equipment</a>
+		<br><br>
+		<table>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Nato Stock Number</td>
+			<td>Date Acquired</td>
+			<td>Date Retired</td>
+		</tr>
+    {% for equipment in equipments %}
+		<tr>
+			<td><a href="equipment?EquipmentID={{ equipment.EquipmentID }}">{{ equipment.EquipmentID }}</a></td>
+			<td>{{ equipment.EquipmentName }}</td>
+			<td>{{ equipment.NatoStockNumber }}</td>
+			<td>{{ equipment.DateAcquired }}</td>
+			<td>{{ equipment.DateRetired }}</td>
+		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}

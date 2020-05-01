@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Equipment</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+	  {% endif %}
+	  
+	<form action="/saveequipment" method="POST">
+	
+		Equipment Name:<br>
+		<input type="text" name="EquipmentName" value="{{ equipment.EquipmentName }}" /><br><br>
+		
+		Nato Stock Number:<br>
+		<input type="number" name="NatoStockNumber" value="{{ equipment.NatoStockNumber }}" /><br><br>
+		
+		Date Acquired:<br>
+		<input type="date" name="DateAcquired" value="{{ equipment.DateAcquired }}" /><br><br>
+		
+		Date Retired:<br>
+		<input type="date" name="DateRetired" value="{{ equipment.DateRetired }}" /><br><br>
+		
+		<input type="hidden" name="EquipmentID" value="{{ equipment.EquipmentID }}" />
+		
+		<br>
+		
+		<input type="submit" value="Save Equipment"/>
+			
+		</form>
+		
+		<form action="/deleteequipment" method="POST">
+		
+			<input type="submit" value="Delete Equipment" />
+			
+			<input type="hidden" name="EquipmentID" value="{{ equipment.EquipmentID }}" />
+			
+		</form>
+{% endblock %}

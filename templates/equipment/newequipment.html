@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>New Equipment</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
+		
+		<form action="/newequipment" method="POST">
+			Equipment Name:<br>
+			<input type="text" name="EquipmentName"  /><br><br>
+			
+			Nato Stock Number:<br>
+			<input type="number" name="NatoStockNumber"  /><br><br>
+			
+			Date Acquired:<br>
+			<input type="date" name="DateAcquired"   /><br><br>
+			
+			Date Retired:<br>
+			<input type="date" name="DateRetired"   /><br><br>
+			
+			<br>
+			
+			<input type="submit" value="Save Equipment"/>
+			
+		</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Completing Task...</h1>
+	<div class="msgText">
+	{% if msg %}
+     {{ msg }}
+      {% else %}
+     Operation Complete.
+      {% endif %}
+	</div>
+	<a href="/equipments">Return to Equipment Table</a>
+{% endblock %}

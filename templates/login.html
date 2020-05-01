@@ -1,0 +1,26 @@
+{% extends "loginbase.html" %}
+
+{% block content %}
+    <h1>Login</h1>
+	{% if msg %}
+      <div id="loginmsg">
+	 
+		{{ msg }}
+	 
+	  </div>
+    {% endif %}
+		
+		<form action="login" method="POST">
+			
+			Email:<br>
+			<input type="text" name="UserEmail" /><br><br>
+			
+			Password:<br>
+			<input type="password" name="UserPassword" /><br><br>
+			
+			<input type="submit" value="Login"/>
+			
+		</form>
+		<br><br>
+		<a target="_blank" href="https://github.com/mailhotd/IS437FinalProject">View on Github</a>
+{% endblock %}

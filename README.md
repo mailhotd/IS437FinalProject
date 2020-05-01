@@ -12,6 +12,13 @@ These are the attendance and issued equipment tables.
 Furthermore, they exist because not every item in inventory is not issued to every user and not all events are mandatory. 
 Additionally, a user’s attendance percentage is only impacted by mandatory events. 
 
+### User Table 
+
+Type | Email | Password 
+------------ | ------------- | --------------
+Admin | a@a.com | 12345
+
+
 ## Relational Schema:
 
 ![A Relational Schema should appear here](/OverviewAndSchema/IS437_FP_Schema.png)

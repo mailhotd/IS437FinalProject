@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Users</h1>
+		<a href="newuser">Add New User</a>
+		<table>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Type</td>
+		</tr>
+    {% for user in users %}
+		<tr>
+			<td><a href="user?UserID={{ user.UserID }}">{{ user.UserID }}</a></td>
+			<td>{{ user.UserFName }} {{ user.UserLName }}</td>
+			<td>{{ user.UserEmail }}</td>
+			<td>{{ user.UserType }}</td>
+		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}

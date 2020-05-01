@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>User</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+	{% endif %}
+	  
+	<form action="/saveuser" method="POST">
+		First Name:<br>
+		<input type="text" name="UserFName" value="{{ user.UserFName }}" /><br><br>
+		
+		Last Name:<br>
+		<input type="text" name="UserLName" value="{{ user.UserLName }}" /><br><br>
+		
+		Email:<br>
+		<input type="text" name="UserEmail" value="{{ user.UserEmail }}" /><br><br>
+		
+		<input type="hidden" name="UserID" value="{{ user.UserID }}" />
+		
+		Password:<br>
+		<input type="password" name="UserPassword" /><br><br>
+		
+		Retype Password:<br>
+		<input type="password" name="UserPassword2" /><br><br>
+		
+		User Type<br>
+		<select name="UserType">
+			<option value="Admin" >Administrator</option>
+			<option value="User" >User</option>
+		</select>
+		
+		<br><br>
+		
+		<input type="submit" value="Save User"/>
+			
+		</form>
+		<br><br>
+		
+		<form action="/deleteuser" method="POST">
+			<input type="submit" value="Delete User" />
+			<input type="hidden" name="UserID" value="{{ user.UserID }}" />
+		</form>
+{% endblock %}
