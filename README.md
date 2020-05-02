@@ -14,9 +14,10 @@ User information will be maintained on their behalf by administrators.
 
 ### User Table 
 
-Type | Email | Password 
------------- | ------------- | --------------
-Admin | a@a.com | 12345
+ID	| Name	| Email |	Type
+------------ | ------------- | -------------- | --------------
+1	| Cadet Major | admin@rotc.com	| Admin
+4 |	Cadet | Sergeant |	sgt@rotc.com |	User
 
 
 ## Relational Schema:
