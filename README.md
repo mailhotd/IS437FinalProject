@@ -17,7 +17,7 @@ User information will be maintained on their behalf by administrators.
 ID	| Name	| Email |	Type
 ------------ | ------------- | -------------- | --------------
 1	| Cadet Major | admin@rotc.com	| Admin
-4 |	Cadet | Sergeant |	sgt@rotc.com |	User
+4 |	Cadet Sergeant |	sgt@rotc.com |	User
 
 
 ## Relational Schema:
