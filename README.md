@@ -15,7 +15,7 @@ User information will be maintained on their behalf by administrators.
 ### User Table 
 
 UserID	| UserFName	| UserLName |	Type | Email |	Password
------------- | ------------- | -------------- | -------------- | --------------
+------------ | ------------- | -------------- | -------------- | -------------- | --------------
 1	| Cadet Major | Admin | admin@rotc.com	| 12345
 4 |	Cadet Sergeant |	User |	sgt@rotc.com | qwert
 
