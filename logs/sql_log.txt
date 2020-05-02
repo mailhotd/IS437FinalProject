@@ -219,3 +219,16 @@
 2020-05-01 17:43:16.354679 - SELECT * FROM `EquipmentTable` []
 2020-05-01 17:43:30.944746 - SELECT * FROM `UserTable` []
 2020-05-01 17:43:34.319979 - SELECT * FROM `EventTable` []
+2020-05-01 22:51:03.270345 - SELECT * FROM `EquipmentTable` []
+2020-05-01 22:51:50.099542 - SELECT * FROM `EquipmentTable` []
+2020-05-01 22:52:13.676585 - SELECT * FROM `EquipmentTable` []
+2020-05-01 22:52:14.077442 - SELECT * FROM `EquipmentTable` WHERE `EquipmentName` = %s;"Tan Boots"
+2020-05-01 22:52:14.198409 - INSERT INTO `EquipmentTable` (`EquipmentID`,`NatoStockNumber`,`EquipmentName`,`DateAcquired`,`DateRetired`) VALUES (%s,%s,%s,%s,%s);[null, "2512458763659", "Tan Boots", "2020-01-01", ""]
+2020-05-01 22:52:49.681448 - SELECT * FROM `EquipmentTable` []
+2020-05-01 22:54:26.346104 - SELECT * FROM `UserTable` []
+2020-05-01 22:54:57.665410 - SELECT * FROM `UserTable` WHERE `UserEmail` = %s;"sgt@rotc.com"
+2020-05-01 22:54:57.816118 - INSERT INTO `UserTable` (`UserFName`,`UserLName`,`UserType`,`UserEmail`,`UserPassword`) VALUES (%s,%s,%s,%s,%s);["Cadet", "Sergeant", "User", "sgt@rotc.com", "qwert"]
+2020-05-01 22:55:01.684787 - SELECT * FROM `UserTable` []
+2020-05-01 22:55:45.334106 - SELECT * FROM `UserTable` []
+2020-05-01 23:06:07.837571 - SELECT * FROM `UserTable` []
+2020-05-01 23:11:38.441938 - SELECT * FROM `UserTable` []

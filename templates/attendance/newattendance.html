@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Attendance Record for Event</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
+		
+		<form action="/newattendance" method="POST">
+			
+			<select name="EventID">
+				{% for event in e %}
+					<option value="{{ event.EventID }}">{{ event.EventName }} ({{ event.EventStartDT }})</option>
+				{% endfor %}
+			</select>
+			<select name="UserID">
+				{% for user in u %}
+					<option value="{{ user.UserID }}">{{ user.UserFName }} ({{ user.UserLName }})</option>
+				{% endfor %}
+			</select>
+			<br><br>
+			Cadet Performance Evaluation:<br>
+			<textarea name="UserEvaluation"></textarea><br><br>
+
+			<br>
+			
+			<input type="submit" value="Save Evaluation"/>
+			
+		</form>
+{% endblock %}

@@ -4,7 +4,7 @@ from flask import request,session, redirect, url_for, escape,send_from_directory
 from user import userList
 from event import eventList
 from equipment import equipmentList
-#from issuedequipment import issuedequipmentList
+#from issuedEquipment import issuedEquipmentList
 #from attendance import attendanceList
 import pymysql,json,time
 from flask_session import Session  

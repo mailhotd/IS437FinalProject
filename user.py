@@ -16,6 +16,8 @@ class userList(baseObject):
             self.errorList.append("First name cannot be blank.")
         if len(self.data[n]['UserLName']) == 0:
             self.errorList.append("Last name cannot be blank.")
+        if len(self.data[n]['UserType']) == 0:
+            self.errorList.append("Type cannot be blank.")
   
         if len(self.errorList) > 0:
             return False
@@ -38,6 +40,8 @@ class userList(baseObject):
             self.errorList.append("First name cannot be blank.")
         if len(self.data[n]['UserLName']) == 0:
             self.errorList.append("Last name cannot be blank.")
+        if len(self.data[n]['UserType']) == 0:
+            self.errorList.append("Type cannot be blank.")
         
         if len(self.errorList) > 0:
             return False
