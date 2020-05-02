@@ -16,8 +16,8 @@ User information will be maintained on their behalf by administrators.
 
 UserID	| UserFName	| UserLName |	Type | Email |	Password
 ------------ | ------------- | -------------- | -------------- | -------------- | --------------
-1	| Cadet Major | Admin | admin@rotc.com	| 12345
-4 |	Cadet Sergeant |	User |	sgt@rotc.com | qwert
+1	| Cadet | Major | Admin | admin@rotc.com	| 12345
+4 |	Cadet | Sergeant |	User |	sgt@rotc.com | qwert
 
 
 ## Relational Schema:
