@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Main menu</h1>
+    <h1>ROTC Manager - Main Menu</h1>
 	{% if msg %}
       <div id="menumsg">
 		{{ msg }}
 	  </div>
     {% endif %}
-	<br><br>
+	<br>
 	<a href="users">Manage Users</a><br>
 	<a href="events">Manage Events</a><br>
 	<a href="equipments">Manage Equipment</a><br>
+	<a href="attendances">Manage Attendance</a><br>
+	<a href="issuedequipments">Manage Issued Equipment</a><br>
 	
 	
 {% endblock %}

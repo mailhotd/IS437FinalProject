@@ -4,8 +4,8 @@ from flask import request,session, redirect, url_for, escape,send_from_directory
 from user import userList
 from event import eventList
 from equipment import equipmentList
-#from issuedEquipment import issuedEquipmentList
-#from attendance import attendanceList
+from issuedEquipment import issuedEquipmentList
+from attendance import attendanceList
 import pymysql,json,time
 from flask_session import Session  
 
@@ -52,6 +52,12 @@ def logout():
     del session['active'] 
     return render_template('login.html', title='Login', msg='Logged out.')
 
+'''
+================================================================
+START USER PAGES:
+================================================================
+'''
+
 @app.route('/users')
 def users():
     if checkSession() == False: 
@@ -68,7 +74,7 @@ def user():
         return redirect('login')
     u = userList()
     if request.args.get(u.pk) is None:
-        return render_template('error.html', msg='No user id given.')  
+        return render_template('error.html', msg='No User ID given.')  
 
     u.getById(request.args.get(u.pk))
     if len(u.data) <= 0:
@@ -132,7 +138,11 @@ def deleteuser():
     u = userList()
     u.deleteById(request.form.get('UserID'))
     return render_template('confirmaction.html', title='Cadet Deleted',  msg='Cadet Deleted!')
-        
+'''
+================================================================
+END USER PAGES
+================================================================
+'''
 '''
 ================================================================
 START EVENT PAGES:
@@ -322,9 +332,69 @@ START ISSUED EQUIPMENT PAGES:
 ================================================================
 '''
 
+@app.route('/issuedequipments')
+def issuedequipments():
+    if checkSession() == False: 
+        return redirect('login')
+    i = issuedEquipmentList()
+    i.getAll()
+    return render_template('issuedequipment/issuedequipments.html', title='Issued Equipment List',  issuedequipments=i.data)
+    
+@app.route('/newissuedequipment',methods = ['GET', 'POST'])
+def newissuedequipment():
+    if checkSession() == False: 
+        return redirect('login')
+    allEquipment = equipmentList()
+    allEquipment.getAll()
+    allUsers = userList()
+    allUsers.getAll()
+    if request.form.get('EquipmentStatus') is None:
+        i = issuedEquipmentList()
+        i.set('EquipmentID','')
+        i.set('UserID','')
+        i.set('IssueDate','')
+        i.set('ReturnDate','')
+        i.set('DateReturned','')
+        i.set('DateReplaced','')
+        i.set('EquipmentStatus','')
+        i.add()
+        return render_template('issuedequipment/newissuedequipment.html', title='New Issued Equipment',  issuedequipment=i.data[0],il=allEquipment.data,ul=allUsers.data) 
+    else:
+        i = issuedEquipmentList()
+        i.set('EquipmentID',request.form.get('EquipmentID'))
+        i.set('UserID',request.form.get('UserID'))
+        i.set('IssueDate',request.form.get('IssueDate'))
+        i.set('ReturnDate',request.form.get('ReturnDate'))
+        i.set('DateReturned',request.form.get('DateReturned'))
+        i.set('DateReplaced',request.form.get('DateReplaced'))
+        i.set('EquipmentStatus',request.form.get('EquipmentStatus'))
+        i.add()
+        if i.verifyNew():
+            i.insert()
+            return render_template('issuedequipment/savedissuedequipment.html', title='Issued Equipment Saved',  issuedequipment=i.data[0])
+        else:
+            return render_template('issuedequipment/issuedequipment.html', title='Issued Equipment Not Saved',  issuedequipment=i.data[0],msg=i.errorList,il=allEquipment.data,ul=allUsers.data)
+
+# @app.route('/saveissuedequipment',methods = ['GET', 'POST'])
+# def saveissuedequipment():
+    # if checkSession() == False: 
+        # return redirect('login')
+        # i.set('EquipmentID',request.form.get('EquipmentID'))
+        # i.set('UserID',request.form.get('UserID'))
+        # i.set('IssueDate',request.form.get('IssueDate'))
+        # i.set('ReturnDate',request.form.get('ReturnDate'))
+        # i.set('DateReturned',request.form.get('DateReturned'))
+        # i.set('DateReplaced',request.form.get('DateReplaced'))
+        # i.set('EquipmentStatus',request.form.get('EquipmentStatus'))
+        # i.add()
+    # if i.verifyChange():
+        # i.update()
+        # return render_template('issuedquipment/savedissuedequipment.html', title='Issued Equipment Saved',  issuedequipment=i.data[0],il=allEquipment.data,ul=allUsers.data)
+    # else:
+        # return render_template('issuedequipment/issuedequipment.html', title='Issued Equipment Not Saved',  issuedequipment=i.data[0],msg=eq.errorList)
 '''
 ================================================================
-END ISSUED EQUIPMENT PAGES:
+END ISSUED EQUIPMENT PAGES
 ================================================================
 '''
 
@@ -333,20 +403,71 @@ END ISSUED EQUIPMENT PAGES:
 START ATTENDANCE PAGES:
 ================================================================
 '''
+@app.route('/attendances')
+def attendances():
+    if checkSession() == False: 
+        return redirect('login')
+    a = attendanceList()
+    a.getAll()
+    return render_template('attendance/attendances.html', title='Attendance List',  attendances=a.data)
+    
+@app.route('/newattendance',methods = ['GET', 'POST'])
+def newattendance():
+    if checkSession() == False: 
+        return redirect('login')
+    allEvents = eventList()
+    allEvents.getAll()
+    allUsers = userList()
+    allUsers.getAll()
+    if request.form.get('UserEvaluation') is None:
+        a = attendanceList()
+        a.set('EventID','')
+        a.set('UserID','')
+        a.set('AttendanceStatus','')
+        a.set('UserEvaluation','')
+        a.add()
+        return render_template('attendance/newattendance.html', title='New Attendance',  attendance=a.data[0],el=allEvents.data,ul=allUsers.data) 
+    else:
+        a = attendanceList()
+        a.set('EventID',request.form.get('EventID'))
+        a.set('UserID',request.form.get('UserID'))
+        a.set('AttendanceStatus',request.form.get('AttendanceStatus'))
+        a.set('UserEvaluation',request.form.get('UserEvaluation'))
+        a.add()
+        if a.verifyNew():
+            a.insert()
+            print(a.data)
+            return render_template('attendance/savedattendance.html', title='Attendance Saved',  attendance=a.data[0])
+        else:
+            return render_template('attendance/newattendance.html', title='Attendance Not Saved',  attendance=a.data[0],msg=a.errorList,el=allEvents.data,ul=allUsers.data)
 
+@app.route('/saveattendance',methods = ['GET', 'POST'])
+def saveattendance():
+    if checkSession() == False: 
+        return redirect('login')
+    a = attendanceList()
+    a.set('EventID',request.form.get('EventID'))
+    a.set('UserID',request.form.get('UserID'))
+    a.set('AttendanceStatus',request.form.get('AttendanceStatus'))
+    a.set('UserEvaluation',request.form.get('UserEvaluation'))
+    a.add()
+    if a.verifyChange():
+        a.update()
+        return render_template('attendance/savedattendance.html', title='Attendance Saved',  attendance=a.data[0],el=allEvents.data,ul=allUsers.data)
+    else:
+        return render_template('attendance/attendance.html', title='Attendance Not Saved',  attendance=a.data[0],msg=eq.errorList)
+ 
 '''
 ================================================================
-END ATTENDANCE PAGES:
+END ATTENDANCE PAGES
 ================================================================
 '''
-
-
 
 @app.route('/main')
 def main():
     if checkSession() == False: 
         return redirect('login')
-    userinfo = 'Hello, ' + session['user']['UserFName']
+    userinfo = 'Hello, ' + session['user']['UserFName'] + ' ' + session['user']['UserLName'] +'!'
     return render_template('main.html', title='Main menu',msg = userinfo)  
 
 def checkSession():

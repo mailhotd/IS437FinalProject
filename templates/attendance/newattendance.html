@@ -11,21 +11,34 @@
     {% endif %}
 		
 		<form action="/newattendance" method="POST">
-			
+			Event ID:<br>
 			<select name="EventID">
-				{% for event in e %}
-					<option value="{{ event.EventID }}">{{ event.EventName }} ({{ event.EventStartDT }})</option>
-				{% endfor %}
-			</select>
-			<select name="UserID">
-				{% for user in u %}
-					<option value="{{ user.UserID }}">{{ user.UserFName }} ({{ user.UserLName }})</option>
-				{% endfor %}
+			{% for event in el %}
+				<option value="{{ event.EventID }}">{{ event.EventName }}</option>
+			{% endfor %}
 			</select>
 			<br><br>
+			
+			User ID:<br>
+			<select name="UserID">
+			{% for user in ul %}
+				<option value="{{ user.UserID }}">{{ user.UserFName }} {{ user.UserLName }}</option>
+			{% endfor %}
+			</select>
+			<br><br>
+			
+			Attendance Status:<br>
+			<select name="AttendanceStatus">
+				<option value="Present" >Present</option>
+				<option value="Absent" >Absent</option>
+				<option value="Late" >Late</option>
+			</select>
+			
+			<br><br>
+			
 			Cadet Performance Evaluation:<br>
 			<textarea name="UserEvaluation"></textarea><br><br>
-
+			
 			<br>
 			
 			<input type="submit" value="Save Evaluation"/>

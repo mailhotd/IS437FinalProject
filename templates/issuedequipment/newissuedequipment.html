@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>New review of event</h1>
+    <h1>Issued Equipment</h1>
 	{% if msg %}
       <div id="errormsg">
 	  {% for err in msg %}
@@ -10,20 +10,46 @@
 	  </div>
     {% endif %}
 		
-		<form action="/newreview" method="POST">
+		<form action="/newissuedequipment" method="POST">
 			
-			<select name="event_id">
-				{% for event in el %}
-					<option value="{{ event.eid }}">{{ event.name }} ({{ event.start }})</option>
-				{% endfor %}
+			Equipment ID:<br>
+			<select name="EquipmentID">
+			{% for equipment in il %}
+				<option value="{{ equipment.EquipmentID }}">{{ equipment.EquipmentName }}</option>
+			{% endfor %}
 			</select>
 			<br><br>
-			Review (Write your review below)<br>
-			<textarea name="review"></textarea><br><br>
-
-			<br>
 			
-			<input type="submit" value="Save review"/>
+			User ID:<br>
+			<select name="UserID">
+			{% for user in ul %}
+				<option value="{{ user.UserID }}">{{ user.UserFName }} {{ user.UserLName }}</option>
+			{% endfor %}
+			</select>
+			<br><br>
+			
+			Issue Date:<br>
+			<input type="date" name="IssueDate"  /><br><br>
+			
+			Return Date:<br>
+			<input type="date" name="ReturnDate"  /><br><br>
+			
+			Date Returned:<br>
+			<input type="date" name="DateReturned"  /><br><br>
+			
+			Date Replaced:<br>
+			<input type="date" name="DateReplaced"  /><br><br>
+			
+			Equipment Status:<br>
+			<select name="EquipmentStatus">
+				<option value="Issued">Issued</option>
+				<option value="Lost">Lost</option>
+				<option value="Retired">Retired</option>
+				<option value="Returned">Returned</option>
+			</select>
+			<br><br>
+			
+			<input type="submit" value="Issue Equipment"/>
 			
 		</form>
 {% endblock %}

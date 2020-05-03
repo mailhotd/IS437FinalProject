@@ -9,40 +9,24 @@ class attendanceList(baseObject):
         
     def verifyNew(self,n=0):
         self.errorList = []
-        EventID = self.data[n]['EventID']
-        UserID = self.data[n]['UserID']
+        
         e = eventList()
+        EventID = self.data[n]['EventID']
         e.getById(EventID)
         EventName = e.data[0]['EventName']
         
         u = userList()
+        UserID = self.data[n]['UserID']
         u.getById(UserID)
         UserFName = u.data[0]['UserFName']
+        UserLName = u.data[0]['UserLName']
         
-        now = datetime.now()
-       
-        prefix_text = UserFName + '\'s review of "' + EventName + '".  Reviwed on ' + str(now) + ' '
-        
-        if len(self.data[n]['review']) == 0:
-            self.errorList.append("Review body cannot be blank.")
+        if len(self.data[n]['UserEvaluation']) == 0:
+            self.errorList.append("Report on user cannot be blank.")
         else:
-            self.data[n]['review'] = prefix_text + self.data[n]['review']
+            self.data[n]['UserEvaluation'] = self.data[n]['UserEvaluation']
 
         if len(self.errorList) > 0:
             return False
         else:
             return True
-            
-    def getByUser(self,id):
-    
-        sql = '''SELECT * FROM `AttendanceTable` 
-        LEFT JOIN `EventTable` ON `EventTable`.`EventID` = `AttendanceTable`.`EventID`
-        WHERE  `AttendanceTable`.`UserID` = %s'''
-        tokens = (id)
-        self.connect()
-        cur = self.conn.cursor(pymysql.cursors.DictCursor)
-        self.log(sql,tokens)
-        cur.execute(sql,tokens)
-        self.data = []
-        for row in cur:
-            self.data.append(row)

@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `AttendanceTable` (
   `EventID` int(11) NOT NULL,
   `AttendanceStatus` varchar(20) NOT NULL,
   `UserEvaluation` text NOT NULL,
-  PRIMARY KEY (`UserID`,`EventID`),
+  PRIMARY KEY (`AttendanceID`),
   KEY `EventID` (`EventID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `IssuedEquipmentTable` (
   `DateReturned` datetime NOT NULL,
   `DateReplaced` datetime NOT NULL,
   `EquipmentStatus` text NOT NULL,
-  PRIMARY KEY (`UserID`,`EquipmentID`),
+  PRIMARY KEY (`IssuedEquipmentID`),
   UNIQUE KEY `UserID` (`UserID`,`EquipmentID`),
   KEY `EquipmentID` (`EquipmentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

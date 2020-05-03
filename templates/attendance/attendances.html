@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Events</h1>
-		<a href="newevent">Add new event</a>
+    <h1>Attendance Records</h1>
+		<a href="newattendance">Add New Record</a>
+		<br><br>
 		<table>
 		<tr>
-			<td>eid</td>
-			<td>name</td>
-			<td>start</td>
+			<td>Event ID</td>
+			<td>User ID</td>
+			<td>Attendance Status</td>
+			<td>Attendance Record</td>
+			
 		</tr>
-    {% for event in events %}
+    {% for attendance in attendances %}
 		<tr>
-			<td><a href="event?eid={{ event.eid }}">{{ event.eid }}</a></td>
-			<td>{{ event.name }}</td>
-			<td>{{ event.start }}</td>
+			<td>{{ attendance.EventID }}</td>
+			<td>{{ attendance.UserID }}</td>
+			<td>{{ attendance.AttendanceStatus }}</td>
+			<td>{{ attendance.UserEvaluation }}</td>
 		</tr>
     {% endfor %}
 	</table>

@@ -1,4 +1,5 @@
-# from equipment import equipmentList
+from equipment import equipmentList
+from attendance import attendanceList
 # from user import userList
 # import time
 
@@ -34,3 +35,7 @@
 # print(u.data)
 
 # u.insert()
+
+a = attendanceList()
+
+print(a.getAll())
