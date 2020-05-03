@@ -21,10 +21,12 @@ class attendanceList(baseObject):
         UserFName = u.data[0]['UserFName']
         UserLName = u.data[0]['UserLName']
         
+        comment = UserFName + ' ' + UserLName + '\'s record for' + ' ' + EventName + '\n' + 'Comment: '
+        
         if len(self.data[n]['UserEvaluation']) == 0:
-            self.errorList.append("Report on user cannot be blank.")
+            self.errorList.append("Evaluation body cannot be blank.")
         else:
-            self.data[n]['UserEvaluation'] = self.data[n]['UserEvaluation']
+            self.data[n]['UserEvaluation'] = comment + self.data[n]['UserEvaluation']
 
         if len(self.errorList) > 0:
             return False

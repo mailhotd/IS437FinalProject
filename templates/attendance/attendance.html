@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Attendance Record</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
+
+		<form action="/deletedattendance" method="POST">
+		
+			<input type="submit" value="Delete Attendance" />
+			
+			<input type="hidden" name="AttendanceID" value="{{ attendance.AttendanceID }}" />
+			
+		</form>
+		<br>
+		<a href="/attendances">Return to Attendance Records</a>
+{% endblock %}

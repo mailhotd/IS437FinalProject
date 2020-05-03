@@ -516,3 +516,253 @@
 2020-05-03 13:42:23.285442 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"5"
 2020-05-03 13:42:25.193026 - DELETE FROM `UserTable` WHERE `UserID` = %s;"5"
 2020-05-03 13:42:42.114737 - DELETE FROM `UserTable` WHERE `UserID` = %s;"5"
+2020-05-03 16:49:41.318804 - SELECT * FROM `AttendanceTable` []
+2020-05-03 16:49:44.159239 - SELECT * FROM `EventTable` []
+2020-05-03 16:49:44.426826 - SELECT * FROM `UserTable` []
+2020-05-03 16:49:58.012307 - SELECT * FROM `EventTable` []
+2020-05-03 16:49:58.292842 - SELECT * FROM `UserTable` []
+2020-05-03 16:51:22.537819 - SELECT * FROM `EventTable` []
+2020-05-03 16:51:23.022522 - SELECT * FROM `UserTable` []
+2020-05-03 16:51:23.513209 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 16:51:23.797451 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 16:51:23.940070 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);["Present, good morale!", "1", "6", "Present", "Present, good morale!"]
+2020-05-03 16:51:26.574020 - SELECT * FROM `AttendanceTable` []
+2020-05-03 16:55:52.394039 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 16:56:17.180117 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 16:56:32.494543 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 16:56:49.100847 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:03:21.463953 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:03:41.191614 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:04:19.095472 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:04:26.952618 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:05:03.786493 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:08:07.133445 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:08:12.942059 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:14:16.619419 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:14:16.880721 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:15:03.492442 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:15:03.750935 - SELECT * FROM `EventTable` WHERE `EventID` = %s;null
+2020-05-03 17:38:34.519610 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:38:36.462209 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:39:31.315631 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:39:50.175450 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:39:52.649951 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:40:15.133121 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:40:44.617219 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 17:40:46.995047 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:47:55.615846 - SELECT * FROM `EventTable` []
+2020-05-03 17:47:55.920547 - SELECT * FROM `UserTable` []
+2020-05-03 17:48:10.837852 - SELECT * FROM `EventTable` []
+2020-05-03 17:48:11.139907 - SELECT * FROM `UserTable` []
+2020-05-03 17:48:11.584591 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 17:48:11.859662 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"5"
+2020-05-03 17:48:12.059367 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "5", "6", "Absent", "Shitbag alert"]
+2020-05-03 17:48:15.837469 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:48:17.974084 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"2"
+2020-05-03 17:50:08.707300 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;null
+2020-05-03 17:52:49.070507 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"2"
+2020-05-03 17:53:37.569499 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"2"
+2020-05-03 17:53:39.332301 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"2"
+2020-05-03 17:53:43.902555 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:53:46.054593 - SELECT * FROM `EventTable` []
+2020-05-03 17:53:46.304637 - SELECT * FROM `UserTable` []
+2020-05-03 17:53:56.806865 - SELECT * FROM `EventTable` []
+2020-05-03 17:53:57.096570 - SELECT * FROM `UserTable` []
+2020-05-03 17:53:57.534169 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 17:53:57.844751 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 17:53:57.975844 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Absent", "Big doodoo alert"]
+2020-05-03 17:54:00.335660 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:54:02.475116 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"3"
+2020-05-03 17:54:08.606917 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"3"
+2020-05-03 17:54:10.400060 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:54:12.675697 - SELECT * FROM `EventTable` []
+2020-05-03 17:54:12.943730 - SELECT * FROM `UserTable` []
+2020-05-03 17:55:00.366683 - SELECT * FROM `EventTable` []
+2020-05-03 17:55:00.666779 - SELECT * FROM `UserTable` []
+2020-05-03 17:55:01.094524 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 17:55:01.425455 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 17:55:01.569243 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Late", "HI"]
+2020-05-03 17:55:04.687842 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:55:08.159862 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"4"
+2020-05-03 17:57:42.625932 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"4"
+2020-05-03 17:57:44.305106 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"4"
+2020-05-03 17:57:46.314157 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:57:47.978048 - SELECT * FROM `EventTable` []
+2020-05-03 17:57:48.240426 - SELECT * FROM `UserTable` []
+2020-05-03 17:57:56.650691 - SELECT * FROM `EventTable` []
+2020-05-03 17:57:57.029605 - SELECT * FROM `UserTable` []
+2020-05-03 17:57:57.506570 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 17:57:58.001530 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 17:57:58.191268 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "Bing Bong"]
+2020-05-03 17:58:00.094485 - SELECT * FROM `AttendanceTable` []
+2020-05-03 17:58:06.848786 - SELECT * FROM `UserTable` []
+2020-05-03 17:58:08.545653 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"5"
+2020-05-03 17:58:11.384242 - DELETE FROM `UserTable` WHERE `UserID` = %s;"5"
+2020-05-03 17:58:14.175875 - SELECT * FROM `UserTable` []
+2020-05-03 18:13:49.925903 - SELECT * FROM `UserTable` []
+2020-05-03 18:13:55.733013 - SELECT * FROM `EquipmentTable` []
+2020-05-03 18:14:01.160566 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:14:07.650087 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"5"
+2020-05-03 18:14:09.631837 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"5"
+2020-05-03 18:14:12.430257 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:17:25.827648 - SELECT * FROM `EventTable` []
+2020-05-03 18:17:26.107012 - SELECT * FROM `UserTable` []
+2020-05-03 18:17:42.039039 - SELECT * FROM `EventTable` []
+2020-05-03 18:17:42.334538 - SELECT * FROM `UserTable` []
+2020-05-03 18:17:42.751993 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:17:43.325638 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:17:43.797046 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "This boy weak"]
+2020-05-03 18:17:45.958205 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:30:16.431943 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:30:40.039108 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:30:44.388023 - SELECT * FROM `EventTable` []
+2020-05-03 18:30:45.021200 - SELECT * FROM `UserTable` []
+2020-05-03 18:31:02.011453 - SELECT * FROM `EventTable` []
+2020-05-03 18:31:02.473138 - SELECT * FROM `UserTable` []
+2020-05-03 18:31:02.962274 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:31:03.285235 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"4"
+2020-05-03 18:31:36.085710 - SELECT * FROM `EventTable` []
+2020-05-03 18:31:36.517971 - SELECT * FROM `UserTable` []
+2020-05-03 18:31:37.040093 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:31:37.466262 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"4"
+2020-05-03 18:31:37.656063 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "4", "6", "Present", "CadetSergeantattended PT/Comment: Yoo lmao"]
+2020-05-03 18:31:39.846147 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:32:09.092648 - SELECT * FROM `EventTable` []
+2020-05-03 18:32:09.403101 - SELECT * FROM `UserTable` []
+2020-05-03 18:32:24.251025 - SELECT * FROM `EventTable` []
+2020-05-03 18:32:24.610256 - SELECT * FROM `UserTable` []
+2020-05-03 18:32:25.043605 - SELECT * FROM `EventTable` []
+2020-05-03 18:32:25.081487 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:32:25.303839 - SELECT * FROM `UserTable` []
+2020-05-03 18:32:25.324761 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:32:25.471414 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Late", "Cadet Majorattended PT Comment: This mf late as fucc"]
+2020-05-03 18:32:25.726596 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:32:26.037382 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:32:26.223392 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Late", "Cadet Majorattended PT Comment: This mf late as fucc"]
+2020-05-03 18:32:28.199109 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:32:39.201918 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"9"
+2020-05-03 18:32:40.548211 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"9"
+2020-05-03 18:32:41.997269 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:32:43.355215 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"8"
+2020-05-03 18:32:44.791473 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"8"
+2020-05-03 18:32:46.668170 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:32:56.138510 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"7"
+2020-05-03 18:32:58.300183 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"7"
+2020-05-03 18:33:00.232912 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:33:48.932042 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"6"
+2020-05-03 18:33:50.639499 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"6"
+2020-05-03 18:33:52.504195 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:33:54.094986 - SELECT * FROM `EventTable` []
+2020-05-03 18:33:54.434618 - SELECT * FROM `UserTable` []
+2020-05-03 18:34:10.387720 - SELECT * FROM `EventTable` []
+2020-05-03 18:34:10.806137 - SELECT * FROM `UserTable` []
+2020-05-03 18:34:11.527412 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:34:11.966045 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:34:12.221639 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "Cadet Majorattended  PT Comment: Yo this nigga weak af tho"]
+2020-05-03 18:34:14.006360 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:34:41.800129 - SELECT * FROM `EventTable` []
+2020-05-03 18:34:42.185350 - SELECT * FROM `UserTable` []
+2020-05-03 18:34:55.145907 - SELECT * FROM `EventTable` []
+2020-05-03 18:34:55.439839 - SELECT * FROM `UserTable` []
+2020-05-03 18:34:55.908152 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"7"
+2020-05-03 18:34:56.203678 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:34:56.336755 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "7", "Present", "Cadet Major attended Urinalysis Comment: Yo this nigga pissin"]
+2020-05-03 18:34:58.557174 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:35:26.310153 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"11"
+2020-05-03 18:35:30.286141 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"11"
+2020-05-03 18:35:31.939681 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:36:51.911829 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"10"
+2020-05-03 18:36:54.004059 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"10"
+2020-05-03 18:37:27.569545 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:37:29.584585 - SELECT * FROM `EventTable` []
+2020-05-03 18:37:29.956992 - SELECT * FROM `UserTable` []
+2020-05-03 18:37:47.849403 - SELECT * FROM `EventTable` []
+2020-05-03 18:37:48.237807 - SELECT * FROM `UserTable` []
+2020-05-03 18:37:48.786317 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:37:49.163139 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:37:49.322884 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Late", "Cadet Major  attended  PT Comment: Late, unexcused"]
+2020-05-03 18:37:51.416477 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:38:24.414149 - SELECT * FROM `EventTable` []
+2020-05-03 18:38:24.768070 - SELECT * FROM `UserTable` []
+2020-05-03 18:38:30.780857 - SELECT * FROM `EventTable` []
+2020-05-03 18:38:31.043136 - SELECT * FROM `UserTable` []
+2020-05-03 18:38:31.458948 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:38:31.747297 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:38:31.887863 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "Cadet Major  attended  PT /nComment: Hello"]
+2020-05-03 18:38:33.999801 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:39:29.370441 - SELECT * FROM `EventTable` []
+2020-05-03 18:39:29.783542 - SELECT * FROM `UserTable` []
+2020-05-03 18:39:36.289337 - SELECT * FROM `EventTable` []
+2020-05-03 18:39:36.554345 - SELECT * FROM `UserTable` []
+2020-05-03 18:39:37.168032 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:39:37.467886 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:39:37.658296 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "Cadet Major  attended  PT \nComment: yoo"]
+2020-05-03 18:39:43.605551 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:40:02.405034 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"14"
+2020-05-03 18:40:04.211901 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"14"
+2020-05-03 18:40:45.733904 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"14"
+2020-05-03 18:40:48.737997 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:40:56.211950 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"13"
+2020-05-03 18:40:58.127068 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"13"
+2020-05-03 18:41:20.105834 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:41:30.952245 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"12"
+2020-05-03 18:43:14.819326 - SELECT * FROM `EventTable` []
+2020-05-03 18:43:15.198054 - SELECT * FROM `UserTable` []
+2020-05-03 18:44:00.576556 - SELECT * FROM `EventTable` []
+2020-05-03 18:44:01.040974 - SELECT * FROM `UserTable` []
+2020-05-03 18:44:01.575174 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"7"
+2020-05-03 18:44:01.998091 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"4"
+2020-05-03 18:44:02.243647 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "4", "7", "Present", "Cadet Sergeant  attended  Urinalysis \nComment: Great believe"]
+2020-05-03 18:44:05.655041 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:45:10.956406 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"15"
+2020-05-03 18:45:15.776065 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:45:48.751136 - SELECT * FROM `EventTable` []
+2020-05-03 18:45:49.039668 - SELECT * FROM `UserTable` []
+2020-05-03 18:45:55.208174 - SELECT * FROM `EventTable` []
+2020-05-03 18:45:55.509828 - SELECT * FROM `UserTable` []
+2020-05-03 18:45:55.938262 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:45:56.218107 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:47:32.884093 - SELECT * FROM `EventTable` []
+2020-05-03 18:47:33.216724 - SELECT * FROM `UserTable` []
+2020-05-03 18:47:33.718161 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:47:34.022831 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:47:39.361934 - SELECT * FROM `EventTable` []
+2020-05-03 18:47:39.662960 - SELECT * FROM `UserTable` []
+2020-05-03 18:47:40.108063 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 18:47:40.371339 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:47:40.517291 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "Cadet Major  attended  PT \nComment: Hello"]
+2020-05-03 18:47:42.881038 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:47:46.537528 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"16"
+2020-05-03 18:48:44.124381 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"16"
+2020-05-03 18:48:45.764515 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:48:48.180550 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"12"
+2020-05-03 18:48:49.900194 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:48:51.409655 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"12"
+2020-05-03 18:48:52.741402 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"12"
+2020-05-03 18:48:54.379316 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:52:44.706722 - SELECT * FROM `UserTable` []
+2020-05-03 18:52:47.389249 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:52:58.725214 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:53:02.182391 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"15"
+2020-05-03 18:53:15.015196 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:53:44.539120 - SELECT * FROM `AttendanceTable` []
+2020-05-03 18:54:29.198497 - SELECT * FROM `UserTable` []
+2020-05-03 18:54:31.291012 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 18:54:35.559819 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 19:25:32.435899 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:25:34.464674 - SELECT * FROM `EventTable` []
+2020-05-03 19:25:35.090016 - SELECT * FROM `UserTable` []
+2020-05-03 19:25:44.140903 - SELECT * FROM `EventTable` []
+2020-05-03 19:25:44.478292 - SELECT * FROM `UserTable` []
+2020-05-03 19:25:45.109890 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 19:25:45.677185 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 19:25:45.837997 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Present", "Cadet Major || PT\nComment: 10/10"]
+2020-05-03 19:25:48.132510 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:27:05.874852 - SELECT * FROM `EventTable` []
+2020-05-03 19:27:06.199027 - SELECT * FROM `UserTable` []
+2020-05-03 19:27:16.691349 - SELECT * FROM `EventTable` []
+2020-05-03 19:27:17.035444 - SELECT * FROM `UserTable` []
+2020-05-03 19:27:17.454353 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 19:27:17.734685 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 19:27:17.859726 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Late", "Cadet Major's record for PT\nComment: 5/10"]
+2020-05-03 19:27:19.963801 - SELECT * FROM `AttendanceTable` []

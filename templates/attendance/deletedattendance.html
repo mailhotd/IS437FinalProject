@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Completing Task...</h1>
+	<div class="msgText">
+	{% if msg %}
+     {{ msg }}
+      {% else %}
+     Operation Complete.
+      {% endif %}
+	</div>
+	<br>
+	<a href="/attendances">Return to Attendance Records</a>
+{% endblock %}

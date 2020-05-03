@@ -6,16 +6,14 @@
 		<br><br>
 		<table>
 		<tr>
-			<td>Event ID</td>
-			<td>User ID</td>
+			<td>Attendance ID</td>
 			<td>Attendance Status</td>
 			<td>Attendance Record</td>
 			
 		</tr>
     {% for attendance in attendances %}
 		<tr>
-			<td>{{ attendance.EventID }}</td>
-			<td>{{ attendance.UserID }}</td>
+			<td><a href="attendance?AttendanceID={{ attendance.AttendanceID }}">{{  attendance.AttendanceID  }}</a></td>
 			<td>{{ attendance.AttendanceStatus }}</td>
 			<td>{{ attendance.UserEvaluation }}</td>
 		</tr>
