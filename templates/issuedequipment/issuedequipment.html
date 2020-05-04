@@ -1,23 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Event</h1>
-	<form action="/saveevent" method="POST">
-		Name:<br>
-		<input type="text" name="name" value="{{ event.name }}" /><br><br>
-		
-		Start date/time (2020-06-05 22:15:00)<br>
-		<input type="text" name="start" value="{{ event.start }}" /><br><br>
-		
-		End date/time (2020-06-05 22:15:00)<br>
-		<input type="text" name="end" value="{{ event.end }}" /><br><br>
-		
-		<input type="hidden" name="eid" value="{{ event.eid }}" />
-		
+    <h1>Issued Equipment</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
 
-		<br>
+		<form action="/deletedissuedequipment" method="POST">
 		
-		<input type="submit" value="Save event"/>
+			<input type="submit" value="Delete Issued Equipment" />
+			
+			<input type="hidden" name="IssuedEquipmentID" value="{{ issuedequipment.IssuedEquipmentID }}" />
 			
 		</form>
+		<br>
+		<a href="/issuedequipments">Return to Issued Equipment Table</a>
 {% endblock %}

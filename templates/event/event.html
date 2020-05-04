@@ -15,10 +15,16 @@
 		<input type="text" name="EventName" value="{{ event.EventName }}" /><br><br>
 		
 		Status:<br>
-		<input type="text" name="EventStatus" value="{{ event.EventStatus }}" /><br><br>
+		<select name="EventStatus">
+				<option value="Mandatory" >Mandatory</option>
+				<option value="Optional" >Optional</option>
+			</select><br><br>
 		
 		Semester:<br>
-		<input type="text" name="EventSemester" value="{{ event.EventSemester }}" /><br><br>
+		<select name="EventSemester">
+				<option value="Fall" >Fall</option>
+				<option value="Spring" >Spring</option>
+			</select><br><br>
 		
 		Start:<br>
 		<input type="text" name="EventStartDT" value="{{ event.EventStartDT }}" /><br><br>

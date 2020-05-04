@@ -24,8 +24,8 @@ class issuedEquipmentList(baseObject):
         if len(self.data[n]['EquipmentStatus']) == 0:
             self.errorList.append("Equipment Status Required.")
         else:
-            self.data[n]['EquipmentStatus'] = self.data[n]['EquipmentStatus']
-
+            self.data[n]['EquipmentStatus'] = EquipmentName+ ': ' + self.data[n]['EquipmentStatus']
+        
         if len(self.errorList) > 0:
             return False
         else:

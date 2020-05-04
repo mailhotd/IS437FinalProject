@@ -6,8 +6,7 @@
 		<br><br>
 		<table>
 		<tr>
-			<td>Equiment ID</td>
-			<td>User ID</td>
+			<td>Issued Equiment ID</td>
 			<td>Issue Date</td>
 			<td>Return Date</td>
 			<td>Date Returned</td>
@@ -16,8 +15,7 @@
 		</tr>
     {% for issuedequipment in issuedequipments %}
 		<tr>
-			<td>{{ issuedequipment.EquipmentID }}</td>
-			<td>{{ issuedequipment.UserID }}</td>
+			<td><a href="issuedequipment?IssuedEquipmentID={{ issuedequipment.IssuedEquipmentID }}">{{  issuedequipment.IssuedEquipmentID }}</a></td>
 			<td>{{ issuedequipment.IssueDate }}</td>
 			<td>{{ issuedequipment.ReturnDate }}</td>
 			<td>{{ issuedequipment.DateReturned }}</td>

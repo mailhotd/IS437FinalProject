@@ -766,3 +766,128 @@
 2020-05-03 19:27:17.734685 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
 2020-05-03 19:27:17.859726 - INSERT INTO `AttendanceTable` (`AttendanceID`,`UserID`,`EventID`,`AttendanceStatus`,`UserEvaluation`) VALUES (%s,%s,%s,%s,%s);[null, "1", "6", "Late", "Cadet Major's record for PT\nComment: 5/10"]
 2020-05-03 19:27:19.963801 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:35:37.322940 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"15"
+2020-05-03 19:35:38.530514 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"15"
+2020-05-03 19:35:39.781331 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:35:42.865366 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"16"
+2020-05-03 19:35:44.729579 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"16"
+2020-05-03 19:35:46.307468 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:35:48.815733 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"17"
+2020-05-03 19:35:50.533642 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:35:52.803690 - SELECT * FROM `AttendanceTable` WHERE `AttendanceID` = %s;"17"
+2020-05-03 19:35:53.985638 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"17"
+2020-05-03 19:35:55.534966 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:35:59.767501 - SELECT * FROM `UserTable` []
+2020-05-03 19:36:58.109932 - SELECT * FROM `UserTable` []
+2020-05-03 19:37:12.755855 - SELECT * FROM `EventTable` []
+2020-05-03 19:37:23.471823 - SELECT * FROM `EquipmentTable` []
+2020-05-03 19:37:25.063788 - SELECT * FROM `EquipmentTable` []
+2020-05-03 19:37:34.778009 - SELECT * FROM `EquipmentTable` []
+2020-05-03 19:37:39.888557 - SELECT * FROM `UserTable` []
+2020-05-03 19:37:41.386121 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 19:37:46.685695 - SELECT * FROM `EventTable` []
+2020-05-03 19:37:49.558890 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 19:45:24.433526 - SELECT * FROM `AttendanceTable` []
+2020-05-03 19:45:26.825223 - SELECT * FROM `EventTable` []
+2020-05-03 19:45:27.711135 - SELECT * FROM `UserTable` []
+2020-05-03 19:46:21.324600 - SELECT * FROM `UserTable` []
+2020-05-03 19:46:31.322547 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 19:49:46.801317 - SELECT * FROM `EventTable` []
+2020-05-03 19:49:48.813210 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 19:49:53.187570 - UPDATE `EventTable` SET  `EventName` = %s, `EventStartDT` = %s, `EventEndDT` = %s, `EventStatus` = %s, `EventSemester` = %s WHERE `EventID` = %s["PT", "2020-12-01 01:00:00", "2020-01-01 02:00:00", "Mandatory", "Fall", "6"]
+2020-05-03 19:49:54.975770 - SELECT * FROM `EventTable` []
+2020-05-03 19:49:56.876709 - SELECT * FROM `EventTable` WHERE `EventID` = %s;"6"
+2020-05-03 19:50:00.685249 - UPDATE `EventTable` SET  `EventName` = %s, `EventStartDT` = %s, `EventEndDT` = %s, `EventStatus` = %s, `EventSemester` = %s WHERE `EventID` = %s["PT", "2020-12-01 01:00:00", "2020-01-01 02:00:00", "Mandatory", "Spring", "6"]
+2020-05-03 19:50:02.357434 - SELECT * FROM `EventTable` []
+2020-05-03 19:50:11.626377 - SELECT * FROM `EquipmentTable` []
+2020-05-03 20:41:46.490860 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 20:41:48.729786 - SELECT * FROM `EquipmentTable` []
+2020-05-03 20:41:49.063568 - SELECT * FROM `UserTable` []
+2020-05-03 20:42:06.966271 - SELECT * FROM `EquipmentTable` []
+2020-05-03 20:42:07.458654 - SELECT * FROM `UserTable` []
+2020-05-03 20:48:33.196820 - SELECT * FROM `EquipmentTable` []
+2020-05-03 20:48:36.078406 - SELECT * FROM `UserTable` []
+2020-05-03 20:53:10.499132 - SELECT * FROM `EquipmentTable` []
+2020-05-03 20:53:10.832239 - SELECT * FROM `UserTable` []
+2020-05-03 20:54:03.380678 - SELECT * FROM `EquipmentTable` []
+2020-05-03 20:54:03.678900 - SELECT * FROM `UserTable` []
+2020-05-03 20:54:04.102744 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"6"
+2020-05-03 20:54:04.408924 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 20:54:04.568497 - INSERT INTO `IssuedEquipmentTable` (`IssuedEquipmentID`,`UserID`,`EquipmentID`,`IssueDate`,`ReturnDate`,`DateReturned`,`DateReplaced`,`EquipmentStatus`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);[null, "1", "6", "2017-01-01", "", "", "", "Issued"]
+2020-05-03 20:54:07.542541 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 20:54:16.001176 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"1"
+2020-05-03 20:56:16.050354 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 20:57:57.887135 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 20:58:02.872377 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 20:58:06.329577 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"1"
+2020-05-03 20:58:07.534610 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 20:58:09.083498 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 20:59:27.276428 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"1"
+2020-05-03 20:59:29.128471 - DELETE FROM `AttendanceTable` WHERE `AttendanceID` = %s;"1"
+2020-05-03 20:59:31.108021 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:00:24.850477 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"1"
+2020-05-03 21:00:26.192885 - DELETE FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"1"
+2020-05-03 21:00:27.539964 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:00:44.985658 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:00:45.238834 - SELECT * FROM `UserTable` []
+2020-05-03 21:01:07.046326 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:01:07.351507 - SELECT * FROM `UserTable` []
+2020-05-03 21:01:07.742461 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"6"
+2020-05-03 21:01:08.015730 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"4"
+2020-05-03 21:01:08.171315 - INSERT INTO `IssuedEquipmentTable` (`IssuedEquipmentID`,`UserID`,`EquipmentID`,`IssueDate`,`ReturnDate`,`DateReturned`,`DateReplaced`,`EquipmentStatus`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);[null, "4", "6", "2020-01-01", "", "", "", "Issued"]
+2020-05-03 21:01:10.603128 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:03:22.466384 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:03:22.740675 - SELECT * FROM `UserTable` []
+2020-05-03 21:03:40.923334 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:03:41.166683 - SELECT * FROM `UserTable` []
+2020-05-03 21:03:41.588736 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"10"
+2020-05-03 21:03:41.857867 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 21:03:57.619666 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:03:57.888944 - SELECT * FROM `UserTable` []
+2020-05-03 21:03:58.317796 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"10"
+2020-05-03 21:03:58.607022 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 21:03:58.732686 - INSERT INTO `IssuedEquipmentTable` (`IssuedEquipmentID`,`UserID`,`EquipmentID`,`IssueDate`,`ReturnDate`,`DateReturned`,`DateReplaced`,`EquipmentStatus`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);[null, "1", "10", "2013-01-01", "", "", "", "Tan BootsIssued"]
+2020-05-03 21:04:00.933819 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:04:32.583818 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:04:32.859080 - SELECT * FROM `UserTable` []
+2020-05-03 21:04:40.680175 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:04:40.959775 - SELECT * FROM `UserTable` []
+2020-05-03 21:04:41.373669 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"6"
+2020-05-03 21:04:41.651924 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 21:04:41.782609 - INSERT INTO `IssuedEquipmentTable` (`IssuedEquipmentID`,`UserID`,`EquipmentID`,`IssueDate`,`ReturnDate`,`DateReturned`,`DateReplaced`,`EquipmentStatus`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);[null, "1", "6", "2020-01-31", "", "", "", "Green Socks: Issued"]
+2020-05-03 21:04:43.800595 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:05:05.787787 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"2"
+2020-05-03 21:05:06.957626 - DELETE FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"2"
+2020-05-03 21:05:08.089596 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:05:09.380411 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"3"
+2020-05-03 21:05:10.618085 - DELETE FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"3"
+2020-05-03 21:05:11.819355 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:05:15.293234 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:05:20.050747 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"7"
+2020-05-03 21:05:22.102325 - DELETE FROM `EquipmentTable` WHERE `EquipmentID` = %s;"7"
+2020-05-03 21:05:26.229916 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:06:15.677300 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"6"
+2020-05-03 21:06:19.835422 - SELECT * FROM `EquipmentTable` WHERE `EquipmentName` = %s;"Green Socks"
+2020-05-03 21:06:19.966110 - UPDATE `EquipmentTable` SET  `EquipmentName` = %s, `NatoStockNumber` = %s, `DateAcquired` = %s, `DateRetired` = %s WHERE `EquipmentID` = %s["Green Socks", "8012547863122", "", "", "6"]
+2020-05-03 21:08:15.331720 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:08:21.213395 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:08:49.598128 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:08:50.026936 - SELECT * FROM `EquipmentTable` WHERE `EquipmentName` = %s;"Tan Tee"
+2020-05-03 21:08:50.168590 - INSERT INTO `EquipmentTable` (`EquipmentID`,`NatoStockNumber`,`EquipmentName`,`DateAcquired`,`DateRetired`) VALUES (%s,%s,%s,%s,%s);[null, "1154878963512", "Tan Tee", "2007-12-01", ""]
+2020-05-03 21:08:53.483852 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:09:09.687988 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:09:22.859905 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:09:23.111324 - SELECT * FROM `UserTable` []
+2020-05-03 21:09:42.853388 - SELECT * FROM `EquipmentTable` []
+2020-05-03 21:09:43.121836 - SELECT * FROM `UserTable` []
+2020-05-03 21:09:43.541560 - SELECT * FROM `EquipmentTable` WHERE `EquipmentID` = %s;"6"
+2020-05-03 21:09:43.783028 - SELECT * FROM `UserTable` WHERE `UserID` = %s;"1"
+2020-05-03 21:09:43.926517 - INSERT INTO `IssuedEquipmentTable` (`IssuedEquipmentID`,`UserID`,`EquipmentID`,`IssueDate`,`ReturnDate`,`DateReturned`,`DateReplaced`,`EquipmentStatus`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);[null, "1", "6", "", "", "", "2019-01-01", "Green Socks: Lost"]
+2020-05-03 21:09:46.105097 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:14:28.938858 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:14:34.292497 - SELECT * FROM `AttendanceTable` []
+2020-05-03 21:14:41.172428 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:14:43.266967 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"5"
+2020-05-03 21:14:48.322353 - SELECT * FROM `IssuedEquipmentTable` []
+2020-05-03 21:15:03.599295 - SELECT * FROM `IssuedEquipmentTable` WHERE `IssuedEquipmentID` = %s;"5"
+2020-05-03 21:15:06.138742 - SELECT * FROM `IssuedEquipmentTable` []

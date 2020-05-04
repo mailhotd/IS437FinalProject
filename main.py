@@ -4,7 +4,7 @@ from flask import request,session, redirect, url_for, escape,send_from_directory
 from user import userList
 from event import eventList
 from equipment import equipmentList
-#from issuedEquipment import issuedEquipmentList
+from issuedEquipment import issuedEquipmentList
 from attendance import attendanceList
 import pymysql,json,time
 from flask_session import Session  
@@ -334,67 +334,74 @@ START ISSUED EQUIPMENT PAGES:
 ================================================================
 '''
 
-# @app.route('/issuedequipments')
-# def issuedequipments():
-    # if checkSession() == False: 
-        # return redirect('login')
-    # i = issuedEquipmentList()
-    # i.getAll()
-    # return render_template('issuedequipment/issuedequipments.html', title='Issued Equipment List',  issuedequipments=i.data)
-    
-# @app.route('/newissuedequipment',methods = ['GET', 'POST'])
-# def newissuedequipment():
-    # if checkSession() == False: 
-        # return redirect('login')
-    # allEquipment = equipmentList()
-    # allEquipment.getAll()
-    # allUsers = userList()
-    # allUsers.getAll()
-    # if request.form.get('IssuedEquipmentID') is None:
-        # i = issuedEquipmentList()
-        # i.set('EquipmentID','')
-        # i.set('UserID','')
-        # i.set('IssueDate','')
-        # i.set('ReturnDate','')
-        # i.set('DateReturned','')
-        # i.set('DateReplaced','')
-        # i.set('EquipmentStatus','')
-        # i.add()
-        # return render_template('issuedequipment/newissuedequipment.html', title='New Issued Equipment',  issuedequipment=i.data[0],il=allEquipment.data,ul=allUsers.data) 
-    # else:
-        # i = issuedEquipmentList()
-        # i.set('IssuedEquipmentID',request.form.get('IssuedEquipmentID'))
-        # i.set('EquipmentID',request.form.get('EquipmentID'))
-        # i.set('UserID',request.form.get('UserID'))
-        # i.set('IssueDate',request.form.get('IssueDate'))
-        # i.set('ReturnDate',request.form.get('ReturnDate'))
-        # i.set('DateReturned',request.form.get('DateReturned'))
-        # i.set('DateReplaced',request.form.get('DateReplaced'))
-        # i.set('EquipmentStatus',request.form.get('EquipmentStatus'))
-        # i.add()
-        # if i.verifyNew():
-            # i.insert()
-            # return render_template('issuedequipment/savedissuedequipment.html', title='Issued Equipment Saved',  issuedequipment=i.data[0])
-        # else:
-            # return render_template('issuedequipment/issuedequipment.html', title='Issued Equipment Not Saved',  issuedequipment=i.data[0],msg=i.errorList,il=allEquipment.data,ul=allUsers.data)
+@app.route('/issuedequipments')
+def issuedequipments():
+    if checkSession() == False: 
+        return redirect('login')
+    i = issuedEquipmentList()
+    i.getAll()
+    return render_template('issuedequipment/issuedequipments.html', title='Issued Equipment List',  issuedequipments=i.data)
 
-# @app.route('/saveissuedequipment',methods = ['GET', 'POST'])
-# def saveissuedequipment():
-    # if checkSession() == False: 
-        # return redirect('login')
-        # i.set('EquipmentID',request.form.get('EquipmentID'))
-        # i.set('UserID',request.form.get('UserID'))
-        # i.set('IssueDate',request.form.get('IssueDate'))
-        # i.set('ReturnDate',request.form.get('ReturnDate'))
-        # i.set('DateReturned',request.form.get('DateReturned'))
-        # i.set('DateReplaced',request.form.get('DateReplaced'))
-        # i.set('EquipmentStatus',request.form.get('EquipmentStatus'))
-        # i.add()
-    # if i.verifyChange():
-        # i.update()
-        # return render_template('issuedquipment/savedissuedequipment.html', title='Issued Equipment Saved',  issuedequipment=i.data[0],il=allEquipment.data,ul=allUsers.data)
-    # else:
-        # return render_template('issuedequipment/issuedequipment.html', title='Issued Equipment Not Saved',  issuedequipment=i.data[0],msg=eq.errorList)
+@app.route('/issuedequipment')
+def issuedequipment():
+    if checkSession() == False: 
+        return redirect('login')
+    i = issuedEquipmentList()
+    if request.args.get(i.pk) is None:
+        return render_template('error.html', msg='No Issued Equipment given.')  
+
+    i.getById(request.args.get(i.pk))
+    if len(i.data) <= 0:
+        return render_template('error.html', msg='Issued Equipment not found.')  
+    
+    print(i.data)
+    return render_template('issuedequipment/issuedequipment.html', title='Issued Equipment ',  issuedequipment=i.data[0])
+
+@app.route('/newissuedequipment',methods = ['GET', 'POST'])
+def newissuedequipment():
+    if checkSession() == False: 
+        return redirect('login')
+    allEquipment = equipmentList()
+    allEquipment.getAll()
+    allUsers = userList()
+    allUsers.getAll()
+    if request.form.get('EquipmentStatus') is None:
+        i = issuedEquipmentList()
+        i.set('EquipmentID','')
+        i.set('UserID','')
+        i.set('IssueDate','')
+        i.set('ReturnDate','')
+        i.set('DateReturned','')
+        i.set('DateReplaced','')
+        i.set('EquipmentStatus','')
+        i.add()
+        return render_template('issuedequipment/newissuedequipment.html', title='New Issued Equipment',  issuedequipment=i.data[0],il=allEquipment.data,ul=allUsers.data) 
+    else:
+        i = issuedEquipmentList()
+        i.set('IssuedEquipmentID',request.form.get('IssuedEquipmentID'))
+        i.set('EquipmentID',request.form.get('EquipmentID'))
+        i.set('UserID',request.form.get('UserID'))
+        i.set('IssueDate',request.form.get('IssueDate'))
+        i.set('ReturnDate',request.form.get('ReturnDate'))
+        i.set('DateReturned',request.form.get('DateReturned'))
+        i.set('DateReplaced',request.form.get('DateReplaced'))
+        i.set('EquipmentStatus',request.form.get('EquipmentStatus'))
+        i.add()
+        if i.verifyNew():
+            i.insert()
+            return render_template('issuedequipment/savedissuedequipment.html', title='Issued Equipment Saved',  issuedequipment=i.data[0])
+        else:
+            return render_template('issuedequipment/newissuedequipment.html', title='Issued Equipment Not Saved',  issuedequipment=i.data[0],msg=i.errorList,il=allEquipment.data,ul=allUsers.data)
+
+@app.route('/deletedissuedequipment',methods = ['GET', 'POST'])
+def deletedissuedequipment():
+    if checkSession() == False: 
+        return redirect('login')
+    print("ID:",request.form.get('IssuedEquipmentID'))
+    i = issuedEquipmentList()
+    i.deleteById(request.form.get('IssuedEquipmentID'))
+    return render_template('issuedequipment/deletedissuedequipment.html', title='Issued Equipment Deleted',  msg='Issued Equipment Deleted!')
+             
 '''
 ================================================================
 END ISSUED EQUIPMENT PAGES
